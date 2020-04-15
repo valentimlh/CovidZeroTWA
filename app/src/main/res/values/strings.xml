@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CovidZero</string>
+    <string name="app_url">https://app.covidzero.com.br</string>
+    <string name="asset_statements">
+        [{
+            \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+            \"target\": {
+                \"namespace\": \"web\",
+                \"site\": \"https://app.covidzero.com.br\"}
+        }]
+    </string>
+</resources>

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('D:\\Apps\\CovidZero\\twa\\keys\\key.jks')
+            storePassword 'tBSYA5dEpVTbTSMg'
+            keyAlias = 'key0'
+            keyPassword 'tBSYA5dEpVTbTSMg'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.covidzero.app"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1"
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+        }
+        debug {
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7'
+    implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:809a55c'
+}
